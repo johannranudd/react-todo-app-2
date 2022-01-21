@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <h2>vercel app</h2>
+      <h2>vercel app update</h2>
     </>
   );
 }
