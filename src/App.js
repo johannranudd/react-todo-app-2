@@ -1,9 +1,7 @@
-import './App.css';
-
 function App() {
   return (
     <>
-      <h2>vercel app update</h2>
+      <h2>vercel app update 2</h2>
     </>
   );
 }
