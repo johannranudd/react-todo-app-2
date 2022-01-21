@@ -1,9 +1,9 @@
 import React from 'react';
 import { FiEdit } from 'react-icons/fi';
 import { MdDeleteForever } from 'react-icons/md';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useState } from 'react/cjs/react.development';
 
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import { BiChevronDown } from 'react-icons/bi';
 
 const List = ({ list, clearList, deleteItem, editItem, numberOfChar }) => {
   return (
@@ -37,7 +37,7 @@ const ListItem = ({ inputValue, editItem, id, deleteItem, numberOfChar }) => {
       </div>
       <div className='button-container'>
         <button
-          className='read-more-btn'
+          className={showText ? 'read-more-btn-rotate' : 'read-more-btn'}
           onClick={() => setShowText(!showText)}
         >
           <BiChevronDown />
