@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiEdit } from 'react-icons/fi';
 import { MdDeleteForever } from 'react-icons/md';
-import { useState } from 'react/cjs/react.development';
 
 import { BiChevronDown } from 'react-icons/bi';
 
@@ -81,3 +80,38 @@ export default List;
 //     </article>
 //   );
 // };
+
+// !
+// with useref
+// const ListItem = ({ inputValue, editItem, id, deleteItem }) => {
+//   const reference = useRef(null);
+
+//   const handleRef = () => {
+//     if (reference.current.className === 'value') {
+//       reference.current.classList = 'show-list';
+//     } else {
+//       reference.current.classList = 'value';
+//     }
+//   };
+
+//   return (
+//     <article className='list-item'>
+//       <div ref={reference} className='value'>
+//         {inputValue}
+//       </div>
+//       <div className='button-container'>
+//         <button className='read-more-btn' onClick={handleRef}>
+//           <BiChevronDown />
+//         </button>
+//         <button className='edit-btn' onClick={() => editItem(id)}>
+//           <FiEdit />
+//         </button>
+//         <button className='delete-btn' onClick={() => deleteItem(id)}>
+//           <MdDeleteForever />
+//         </button>
+//       </div>
+//     </article>
+//   );
+// };
+
+// export default List;

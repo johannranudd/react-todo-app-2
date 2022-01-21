@@ -1,9 +1,11 @@
 import Todo from './components/Todo';
 import { GlobalStyle } from './App.styles';
-import { useEffect, useState } from 'react/cjs/react.development';
+// import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import { size } from './App.styles';
 
 function App() {
+  // build made
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [numberOfChar, setNumberOfChar] = useState(20);
 
