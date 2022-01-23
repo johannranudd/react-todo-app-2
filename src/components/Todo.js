@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { StyledDiv } from './Todo.styled';
 import List from './List';
 import Alert from './Alert';
@@ -13,6 +13,8 @@ const Todo = ({ numberOfChar }) => {
   const [editFlag, setEditFlag] = useState(false);
   const [editID, setEditID] = useState(null);
   const [alert, setAlert] = useState({ show: false, type: '', msg: '' });
+
+  const focusRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,9 +62,11 @@ const Todo = ({ numberOfChar }) => {
     setEditID(id);
     setInputValue(editItem[0].inputValue);
     setEditFlag(true);
+    focusRef.current.focus();
   };
 
   useEffect(() => {
+    focusRef.current.focus();
     setEditFlag(false);
     setInputValue('');
     localStorage.setItem('list', JSON.stringify(list));
@@ -76,6 +80,7 @@ const Todo = ({ numberOfChar }) => {
         <form action='' onSubmit={handleSubmit}>
           <input
             type='text'
+            ref={focusRef}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
