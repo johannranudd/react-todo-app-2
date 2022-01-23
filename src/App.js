@@ -1,6 +1,5 @@
 import Todo from './components/Todo';
 import { GlobalStyle } from './App.styles';
-// import { useEffect, useState } from 'react/cjs/react.development';
 import { useEffect, useState } from 'react';
 import { size } from './App.styles';
 
@@ -18,7 +17,11 @@ function App() {
       if (screenWidth > size.mobileXL) {
         return 60;
       } else if (screenWidth > size.mobileL) {
-        return 40;
+        return parseInt((screenWidth / 100) * 8.3);
+      } else if (screenWidth > size.mobileM) {
+        return parseInt((screenWidth / 100) * 7.5);
+      } else {
+        return parseInt((screenWidth / 100) * 6);
       }
     });
     window.addEventListener('resize', resize);
