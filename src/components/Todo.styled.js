@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, device } from '../App.styles';
+import { colors, device, fonts } from '../App.styles';
 
 export const StyledDiv = styled.div`
   max-width: 550px;
@@ -16,6 +16,7 @@ export const StyledDiv = styled.div`
     width: 100%;
     position: relative;
     h2 {
+      font-family: ${fonts.josefin};
       margin-top: 0.5rem;
       text-align: center;
     }

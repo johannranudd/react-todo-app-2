@@ -23,6 +23,7 @@ export const colors = {
 export const fonts = {
   lato: "'Lato', sans-serif;",
   playfair: "'Playfair Display', serif;",
+  josefin: "'Josefin Sans', sans-serif",
 };
 
 export const size = {
@@ -72,8 +73,9 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         height: 100vh;
-        background-image: ${colors.backgroundColorGradient}
+        background-image: ${colors.backgroundColorGradient};
     }
+    
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
             monospace;
