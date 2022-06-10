@@ -19,7 +19,7 @@ the is a personal project to learn react.js
 Clone the repo:
 
 ```bash
-git clone 
+git clone https://github.com/johannranudd/react-todo-app-2.git
 
 npm install
 # or
